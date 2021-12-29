@@ -22,9 +22,10 @@ struct ArticlesResponse: Decodable {
 }
 
 struct Article: Decodable {
-    var identifier: String = UUID().uuidString
+    let identifier: String = UUID().uuidString
     let title: String?
     let description: String?
     let urlToImage: String?
     let content: String?
 }
+

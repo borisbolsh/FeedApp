@@ -6,14 +6,16 @@
 //  
 //
 
+
 import Foundation
 
 final class FeedInteractor {
     weak var output: FeedInteractorOutput?
+
     private let articlesNetworkService: ArticlesNetworkProtocol
-    
+
     private var page: Int = Constants.initialPage
-    
+
     init(articlesNetworkService: ArticlesNetworkProtocol) {
         self.articlesNetworkService = articlesNetworkService
     }
@@ -24,7 +26,7 @@ extension FeedInteractor: FeedInteractorInput {
         self.page = Constants.initialPage
         self.load()
     }
-    
+
     func loadNext() {
         self.load()
     }
